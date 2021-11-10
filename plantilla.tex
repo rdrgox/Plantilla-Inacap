@@ -1,0 +1,101 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc} %interprete de simbolos en español
+\usepackage[spanish]{babel}
+\usepackage[margin=2cm, top=2cm, includefoot]{geometry}
+\usepackage{graphicx} % Insercción de imágenes
+\usepackage[table,xcdraw]{xcolor} % detección de colores
+\usepackage[most]{tcolorbox} % Insercción de cuadros en la portada
+\usepackage{fancyhdr} % definir el estilo de la página
+\usepackage[hidelinks]{hyperref} % gestión de hipervinculos
+\usepackage{listings} % inserccón de codigo 
+\usepackage{parskip} % arreglo de tabluación del documento
+\usepackage[figurename=Figura]{caption} % cambiar nombre del caption de las fotos
+\usepackage{smartdiagram} % insercción de diagramas
+\usepackage{zed-csp} % insercción de tablas
+\usepackage[scaled]{helvet} % Fuente Helvetica
+
+
+\renewcommand\familydefault{\sfdefault} % Quitar fuente default
+
+
+
+% Delaracion de Colores
+\definecolor{rojoPortada}{HTML}{FF0A0A}
+
+% Delaración de variables
+\newcommand{\logoPortada}{imagen/logo-inacap.png}
+\newcommand{\logoInacap}{imagen/inacap.png}
+\newcommand{\startDate}{09 de Noviembre del 2021}
+
+% índices
+\addto\captionsspanish{\renewcommand{\contentsname}{Índice}} % cambio nombre índice
+
+% Imagen Head
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\includegraphics[width=3.5cm]{\logoInacap}}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+    \rfoot[]{\thepage} % número de página lado  derecho
+    
+    % ---- Portada ----
+    \begin{titlepage}
+
+        \setlength{\topmargin}{-38mm}
+
+        \begin{figure}[h!]
+            \makebox{\includegraphics[width=0.28\textwidth]{\logoPortada}}
+        \end{figure}
+        \phantom{}
+        \vfill
+        \begin{center}
+            \textcolor{rojoPortada}\hrule\vspace{2cm}
+            {\LARGE\textcolor{rojoPortada}{TITULO PORTADA TRABAJO}\par}
+            \vspace{0.2cm}
+            \textcolor{rojoPortada}{Ejemplo de título}\par\vspace{2cm}
+            \textcolor{rojoPortada}{\hrule}
+        \end{center}
+        \phantom{}    
+        \vfill
+        
+        \raggedright
+        \begin{tabular}{ll}
+            Nombre: & miNombre\\
+            Carrera: & miCarrera\\
+            Asignatura: & miAsignatura\\
+            Profesor: & miProfesor\\
+            Fecha: & {\startDate}\\
+        \end{tabular}
+    \end{titlepage}
+    \clearpage 
+
+     % ---- Tablas de contenido ----
+     \tableofcontents
+     \clearpage
+
+     % --- Comienzo del Documento ----
+    \section{\textcolor{rojoPortada}{Introducción}}
+    Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo 
+    \clearpage
+
+    \section{Título}
+    \subsection{Subtítulo}
+    Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo 
+
+    \begin{itemize}
+        \item Ejemplo 1
+        \item Ejemplo 2
+        \item Ejemplo 3
+        \item Ejemplo 4
+    \end{itemize} 
+
+    \subsection{Subtítulo}
+    Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo
+    \clearpage
+
+    \section{\textcolor{rojoPortada}{Conclución}}
+    Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo Este es un texto de ejemplo 
+    \clearpage
+
+\end{document}
