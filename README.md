@@ -1,6 +1,6 @@
 # Plantilla Inacap Latex
 
-Ubuntu 20.04 Lts
+Formato creado en Latex para la entrega de informes.
 
 ## Dependencias
 
