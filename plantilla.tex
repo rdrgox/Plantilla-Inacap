@@ -13,6 +13,8 @@
 \usepackage{smartdiagram} % insercción de diagramas
 \usepackage{zed-csp} % insercción de tablas
 \usepackage[scaled]{helvet} % Fuente Helvetica
+\usepackage{stackengine} % opcion1 incluir para poner texto sobre imagen
+\usepackage{tikz} % opcion2 incluir para poner texto sobre imagen
 
 
 \renewcommand\familydefault{\sfdefault} % Quitar fuente default
@@ -44,9 +46,21 @@
 
         \setlength{\topmargin}{-38mm}
 
-        \begin{figure}[h!]
-            \makebox{\includegraphics[width=0.28\textwidth]{\logoPortada}}
-        \end{figure}
+        % incluir texto sobre imagen opcion1
+        \stackinset{c}{}{c}{20mm}{\color{white}{\MakeUppercase{\textbf{informática}}}}{
+            \stackinset{c}{}{c}{10mm}{\color{white}{\MakeUppercase{\textbf{y telecomunicaciones}}}}{%
+                \includegraphics[width=165\unitlength,height=155\unitlength]{\logoPortada}  
+            }
+        }
+        
+        % incluir texto sobre imagen opcion2
+        %\begin{picture}(100,100)%%(x-offset,y-offset)
+        %    \put(2,-64){\includegraphics[width=165\unitlength,height=165\unitlength]{\logoPortada}    }            
+        %    \put(0,60){\color{white}{\MakeUppercase{\textbf{informática\newline y telecomunicaciones}}}}
+        %\end{picture}
+        %%
+       
+
         \phantom{}
         \vfill
         \begin{center}
